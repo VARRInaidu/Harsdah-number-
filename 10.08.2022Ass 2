@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() 
+{
+    int n,even=0,ecount=1;
+    int i,r;
+    scanf("%d",&n);
+    i=n;
+    int x,y;
+    scanf("%d%d",&x,&y);
+    while(n!=0)
+    {
+     r=n%10;
+     if(r==x)
+      {
+       even=even+(y*ecount);
+       ecount=ecount*10;
+      }
+     else
+      {
+        even=even+(r*ecount);
+        ecount=ecount*10;
+      }
+      n=n/10;
+    }
+    printf("%d",even);
+    return 0;
+ }
+    
